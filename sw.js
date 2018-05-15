@@ -76,9 +76,12 @@ self.addEventListener('fetch',function(event) {
 				});
 			});
 
-		}).catch(function(error) {
-			//todo 6
-			console.log('error here');
+		}).catch(function() {
+
+				console.log('got to the new response' );
+				return caches.match('img/11.png');
+
+
 		})
 	);
 });
