@@ -91,7 +91,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('root', function() {
-	return gulp.src('./*.js')
+	return gulp.src('./sw.js')
 		.pipe(gulp.dest('./dist'));
 });
 
