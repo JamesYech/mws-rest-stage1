@@ -123,10 +123,13 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 .detail-details {
   grid-area: details;
+  padding: 0 20px 30px;
 }
 
 .detail-map {
   grid-area: map;
+  margin: 15px 0 0;
+  padding: 0 20px 30px;
 }
 
 .detail-review {
@@ -426,17 +429,14 @@ header {
   width: 100%;*/
 }
 
-.map--cont {
-/*  width: 100%;
-  height: 100%;*/
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  /*border-top: 1px solid #fff;*/
+/*.map--cont {
+
+  align-self: flex-start;
   margin: 15px 0 0;
   height: 400px;
   width: 100%;
 
-}
+}*/
 
 .inside #footer {
   bottom: 0;
@@ -487,7 +487,7 @@ header {
 }
 
 .restaurant-container {
-  padding: 0 20px 30px;
+  /*padding: 0 20px 30px;*/
   /*border-top: 1px solid #fff;*/
   /*width: 50%;*/
 
@@ -496,7 +496,7 @@ header {
 
 .reviews-container {
   border-top: 1px solid #fff;
-    padding: 30px 20px 80px;
+    padding: 0 20px 0;
   width: 100%;
 }
 
@@ -555,6 +555,13 @@ header {
                 overflow-y: hidden;
 
 
+              }
+
+              .detail-wrapper {
+                  grid-template-areas:
+    "details details details details"
+    "map map map map"
+    "review review review review";
               }
 
 }
