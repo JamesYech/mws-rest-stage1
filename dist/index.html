@@ -17,25 +17,24 @@
 	</header>
 
 	<main class="search-wrapper" >
-		<section id="filter-options" class="row filter-options">
+		<section id="filter-options" class="filter-options item-filter">
 			<div class="filter-box">
 				<select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
 					<option value="all">All Neighborhoods</option>
 				</select>
-			</div>
-			<div class="filter-box">
+
 				<select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
 					<option value="all">All Cuisines</option>
 				</select>
 			</div>
 		</section>
 
-		<section id="map-container">
+		<section id="map-container" class="item-map">
 			<div id="map" class="search-map"></div>
 		</section>
 
-		 <section id="filter-results">
-			<ul class="rest-list-wrapper" id="restaurants-list"></ul>
+		 <section id="filter-results" class="item-review">
+			<ul class="rest-list-wrapper " id="restaurants-list"></ul>
 		</section>
 	</main>
 

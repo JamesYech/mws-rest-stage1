@@ -55,14 +55,14 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch',function(event) {
-	console.log('fetch event for ', event.request.url);
+	//console.log('fetch event for ', event.request.url);
 	event.respondWith(
 		caches.match(event.request).then(function(response) {
 			if(response) {
-				console.log('found ',event.request.url,' in cache');
+				//console.log('found ',event.request.url,' in cache');
 				return response;
 			}
-			console.log('network request for ', event.request.url);
+			//console.log('network request for ', event.request.url);
 			return fetch(event.request)
 
 			.then(function(response) {
@@ -78,7 +78,7 @@ self.addEventListener('fetch',function(event) {
 
 		}).catch(function() {
 
-				console.log('got to the new response' );
+				//console.log('got to the new response' );
 				return caches.match('img/11.png');
 
 
