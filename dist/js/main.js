@@ -179,18 +179,18 @@ createRestaurantHTML = (restaurant) => {
   // li.append(address);
   div1.append(address);  //mine
 
-  //  const more = document.createElement('a');
-  // more.innerHTML = 'View Details';
-  // more.href = DBHelper.urlForRestaurant(restaurant);
-  // // li.append(more);
-  // div1.append(more);
-
-
-  const more = document.createElement('button');
+   const more = document.createElement('a');
   more.innerHTML = 'View Details';
-  more.addEventListener('click', function() {window.location.href=DBHelper.urlForRestaurant(restaurant);});
+  more.href = DBHelper.urlForRestaurant(restaurant);
   // li.append(more);
   div1.append(more);
+
+
+  // const more = document.createElement('button');
+  // more.innerHTML = 'View Details';
+  // more.addEventListener('click', function() {window.location.href=DBHelper.urlForRestaurant(restaurant);});
+  // // li.append(more);
+  // div1.append(more);
 
 
 

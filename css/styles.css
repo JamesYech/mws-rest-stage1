@@ -385,7 +385,7 @@ grid-template-columns: 1fr 3fr;
   text-transform: uppercase;
 }
 
-#restaurants-list li button {
+/*#restaurants-list li button {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
@@ -396,7 +396,7 @@ grid-template-columns: 1fr 3fr;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}
+}*/
 
 
 
@@ -533,7 +533,7 @@ header {
               grid-template-areas:
                 "filterv filterv filterv filterv filterv"
                 "mapv mapv mapv mapv mapv"
-                "review review review review review";
+                "list list list list list";
             }
 
 
