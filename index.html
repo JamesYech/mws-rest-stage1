@@ -17,7 +17,7 @@
 	</header>
 
 	<main class="search-wrapper" >
-		<section id="filter-options" class="filter-options search-filter">
+		<section id="filter-options" class="filter-options search-filter" aria-label="Filter Options">
 			<div class="filter-box">
 				<select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
 					<option value="all">All Neighborhoods</option>
@@ -31,6 +31,7 @@
 
 				 <section id="filter-results" class="search-rest-list">
 			<ul class="rest-list-wrapper " id="restaurants-list"></ul>
+			<a href="#filter-options" class="hidden-element" tabindex="0">Back to top</a>
 		</section>
 
 		<section id="map-container"  class="search-map-grid">
