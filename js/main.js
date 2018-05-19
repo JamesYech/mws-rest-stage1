@@ -87,6 +87,14 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+
+  // self.map.addListener( 'tilesloaded', function() {
+  //   [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
+  //     console.log(item);
+  //     item.setAttribute("tabIndex","999");
+  //   });
+  // })
+
   updateRestaurants();
 }
 
@@ -161,7 +169,8 @@ createRestaurantHTML = (restaurant) => {
   li.append(div2); //mine
 
   const div1 = document.createElement('div'); //mine
-  div1.className='rest-list-rest col-1'; //mine
+  div1.className='rest-list-rest col-1';
+  div1.setAttribute("tabIndex","0"); //mine
 
 
   const name = document.createElement('h1');
@@ -179,18 +188,18 @@ createRestaurantHTML = (restaurant) => {
   // li.append(address);
   div1.append(address);  //mine
 
-   const more = document.createElement('a');
-  more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
-  // li.append(more);
-  div1.append(more);
-
-
-  // const more = document.createElement('button');
+  //  const more = document.createElement('a');
   // more.innerHTML = 'View Details';
-  // more.addEventListener('click', function() {window.location.href=DBHelper.urlForRestaurant(restaurant);});
+  // more.href = DBHelper.urlForRestaurant(restaurant);
   // // li.append(more);
   // div1.append(more);
+
+
+  const more = document.createElement('button');
+  more.innerHTML = 'View Details';
+  more.addEventListener('click', function() {window.location.href=DBHelper.urlForRestaurant(restaurant);});
+  // li.append(more);
+  div1.append(more);
 
 
 

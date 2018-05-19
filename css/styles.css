@@ -372,7 +372,7 @@ grid-template-columns: 1fr 3fr;
   margin: 0;
   font-size: 11pt;
 }
-#restaurants-list li a {
+/*#restaurants-list li a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
@@ -383,11 +383,13 @@ grid-template-columns: 1fr 3fr;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}
 
-/*#restaurants-list li button {
+
+}*/
+
+#restaurants-list li button {
   background-color: orange;
-  border-bottom: 3px solid #eee;
+  /*border-bottom: 3px solid #eee;*/
   color: #fff;
   display: inline-block;
   font-size: 10pt;
@@ -396,7 +398,8 @@ grid-template-columns: 1fr 3fr;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}*/
+  border: none;
+}
 
 
 
