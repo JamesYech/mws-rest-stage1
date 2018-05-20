@@ -169,7 +169,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(div2); //mine
 
   const div1 = document.createElement('div'); //mine
-  div1.className='rest-list-rest col-1';
+  div1.className='rest-list-rest';
   div1.setAttribute("tabIndex","0"); //mine
 
 

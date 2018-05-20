@@ -46,7 +46,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #maincontent {
   background-color: #f3f3f3;
-  /*min-height: 100%;*/
 }
 #footer {
   background-color: #444;
@@ -56,289 +55,54 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
-
 }
 
 
-/******  Grids  *******************************************/
-.container {
-  margin: 0 auto 0 auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
+/******  Search/Filter Page  *******************************************/
 
 .search-wrapper {
   margin: 0 auto 0 auto;
-
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows:  auto;
   display: inline-grid;
   width: 100%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows:  auto;
   grid-template-areas:
-    "filterv filterv filterv mapv mapv"
-    "list list list mapv mapv";
+	"filterv filterv filterv mapv mapv"
+	"list list list mapv mapv";
 }
 
 .search-filter {
-/*  grid-column-start: 1;
-  grid-column-end: 4;*/
-  /*width: 50%;*/
   grid-area: filterv;
-
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  height: auto;   /*60px;*/
-  /*max-height: 100px;*/
-  background-color:    #3397DB;
+  height: auto;
+  background-color: #3397DB;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*padding: 20px 0 0 ;*/
 }
 
 .search-map-grid {
-    /*grid-column-start: 4;*/
-  /*grid-column-end: 2;*/
-  /*grid-row-start: 1 span 2;*/
-  /*width: 50%;*/
   grid-area: mapv;
-
 }
 
-
-
-
 .search-rest-list {
-   /* grid-column-start: 1;
-  grid-column-end: 4;*/
-  /*grid-row-start: 2;*/
-  /*width: 50%;*/
   grid-area: list;
 }
 
-
-.detail-wrapper {
-  margin: 0 auto 0 auto;
-
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows:  auto;
-  display: inline-grid;
-  width: 100%;
-  grid-template-areas:
-    "details details map map"
-    "review review review review";
-}
-
-.detail-details {
-  grid-area: details;
-  padding: 0 20px 30px;
-}
-
-.detail-map {
-  grid-area: map;
-  margin: 15px 0 0;
-  padding: 0 20px 30px;
-}
-
-.detail-review {
-  grid-area: review;
-}
-
-.row {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 150px;
-
-}
-
-.info-row {
-    width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px solid #d9d9d9;
-}
-
-
-
-
-.md-50 {
-  width: 50%;
-}
-
-.col-4 {
-  width: 33.33333%
-}
-
-.col-2 {
-  width: 50%;
-
-
-
-}
-
-.col-1 {
-  width: 100%;
-  margin: 0 auto;
-}
-
-
-
-
-
-/* ====================== Navigation ====================== */
-nav {
-  width: 100%;
-  height: 40px;
-  background-color: #252831;
-  text-align:center;
-}
-nav h1 {
-  margin: auto;
-}
-nav h1 a {
-  color: #fff;
-  font-size: 14pt;
-  font-weight: 200;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-}
-#breadcrumb {
-    padding: 10px 20px 10px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    /*width: calc(50% - 80px);*/
-    width: 100%;
-}
-
-/* Display list items side by side */
-#breadcrumb li {
-    display: inline;
-}
-
-/* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-}
-
-/* Add a color to all links inside the list */
-#breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-#breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
-}
-/* ====================== Map ====================== */
-#map {
-/*  height: 400px;
-  width: 100%;
-  background-color: #ccc;*/
-}
-
 .search-map {
-   /*padding: 0 0 0 10px;*/
-  /*border-top: 1px solid #fff;*/
-  /*width: 50%;*/
- /*align-self: flex-start;*/
-  /*border-top: 1px solid #fff;*/
-  /*margin: 0 0 0 10px;*/
    height: 80vh;
   width: 100%;
-
 }
 
-/*-----  rest list --------------------------------*/
-
-.my-well {
-  min-height: 20px;
-  padding: 19px;
-  /*margin-bottom: 20px;*/
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: background-color .25s ease;
-  transition: background-color .25s ease;
-
-}
-
-.rest-list-wrapper {
-  /*display: grid;*/
-  grid-gap: 10px;
-grid-template-columns: 1fr 3fr;
-/*grid-template-rows: 3fr;*/
-  /*height: 150px;*/
-  overflow-y: auto;
-  max-height: 800px;
-}
-
-.rest-list-rest {
-  grid-column: 1;
-  margin-left: 15px;
-}
-
-.my-well:hover {
-  background: #E9E9E9;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-}
-
-.rest-list-img {
-  grid-column: 2;
-  height: 150px;
-  /*grid-row: span 3;*/
-  /*width: 50px;*/
-  /*height: 50px;*/
-}
-
-.rest-list-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: 100%;
-  /*max-width: 100%;*/
-
-}
-
-
-/* ====================== Restaurant Filtering ====================== */
 .filter-options {
-
-
 
 }
 .filter-box {
-  /*margin: 0 auto 20px ;*/
-  /*width: 50%;*/
-
+ /*used by media break*/
+ margin: auto;
 }
 .search-filter h2 {
   color: white;
@@ -359,32 +123,49 @@ grid-template-columns: 1fr 3fr;
   width: 200px;
 }
 
-/* ====================== Restaurant Listing ====================== */
-/*#restaurants-list {
-  background-color: #f3f3f3;
-  list-style: outside none none;
-  margin: 0;
-  padding: 30px 15px 60px;
-  text-align: center;
+.my-well {
+  min-height: 20px;
+  padding: 19px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: background-color .25s ease;
+  transition: background-color .25s ease;
 }
-#restaurants-list li {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  font-family: Arial,sans-serif;
-  margin: 15px;
-  min-height: 380px;
-  padding: 0 30px 25px;
-  text-align: left;
 
+.my-well:hover {
+  background: #E9E9E9;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
 }
-#restaurants-list .restaurant-img {
-  background-color: #ccc;
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  min-height: 248px;
-  min-width: 100%;
-}*/
+
+.rest-list-wrapper {
+  grid-gap: 10px;
+  grid-template-columns: 1fr 3fr;
+  overflow-y: auto;
+  max-height: 800px;
+}
+
+.rest-list-rest {
+  grid-column: 1;
+  margin-left: 15px;
+}
+
+.rest-list-img {
+  grid-column: 2;
+  height: 150px;
+}
+
+.rest-list-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
+}
+
 #restaurants-list li h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -392,31 +173,16 @@ grid-template-columns: 1fr 3fr;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1.3;
-  /*margin: 20px 0 10px;*/
   text-transform: uppercase;
 }
+
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
 }
-/*#restaurants-list li a {
-  background-color: orange;
-  border-bottom: 3px solid #eee;
-  color: #fff;
-  display: inline-block;
-  font-size: 10pt;
-  margin: 15px 0 0;
-  padding: 8px 30px 10px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-
-}*/
 
 #restaurants-list li button {
   background-color: orange;
-  /*border-bottom: 3px solid #eee;*/
   color: #fff;
   display: inline-block;
   font-size: 10pt;
@@ -429,42 +195,153 @@ grid-template-columns: 1fr 3fr;
 }
 
 
+/******  Reviews/Detail Page  *******************************************/
 
-/* ====================== Restaurant Details ====================== */
+.detail-wrapper {
+  margin: 0 auto 0 auto;
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows:  auto;
+  grid-template-areas:
+	"details details map map"
+	"review review review review";
+}
+
+.detail-details {
+  grid-area: details;
+  padding: 0 20px 30px;
+}
+
+.detail-map {
+  grid-area: map;
+  margin: 15px 0 0;
+  padding: 0 20px 30px;
+}
+
+.detail-review {
+  grid-area: review;
+}
+
+.info-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.reviews-container {
+  border-top: 1px solid #fff;
+  padding: 0 20px 0;
+  width: 100%;
+}
+
+.reviews-container h2 {
+  color: #f58500;
+  font-size: 24pt;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-bottom: 1pt;
+}
+
+
+#reviews-list {
+  margin: 0;
+  padding: 0;
+}
+
+#reviews-list li {
+  background-color: #fff;
+  border: 2px solid #f3f3f3;
+  display: block;
+  list-style-type: none;
+  margin: 0 0 30px;
+  overflow: hidden;
+  padding: 0 20px 20px;
+  position: relative;
+  width: 100%;
+}
+
+#reviews-list li p {
+  margin: 0 0 10px;
+}
+
+#restaurant-hours td {
+  color: #666;
+}
+
+
+/* ====================== Navigation ====================== */
+
+nav {
+  width: 100%;
+  height: 40px;
+  background-color: #252831;
+  text-align:center;
+}
+
+nav h1 {
+  margin: auto;
+}
+
+nav h1 a {
+  color: #fff;
+  font-size: 14pt;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+#breadcrumb {
+	padding: 10px 20px 10px;
+	list-style: none;
+	background-color: #eee;
+	font-size: 17px;
+	margin: 0;
+	width: 100%;
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+	display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+	color: #0275d8;
+	text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+	color: #01447e;
+	text-decoration: underline;
+}
+
+
+
+/* ====================== Shared Styles ====================== */
+
 header {
   /*position: fixed;*/
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-.inside #map-container {
-  /*background: blue none repeat scroll 0 0;*/
-  height: 30%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
-}
-.inside #map {
-/*  background-color: #ccc;
-  height: 100%;
-  width: 100%;*/
-}
 
-/*.map--cont {
-
-  align-self: flex-start;
-  margin: 15px 0 0;
-  height: 400px;
-  width: 100%;
-
-}*/
-
-.inside #footer {
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -475,13 +352,16 @@ header {
   text-transform: uppercase;
   line-height: 1.1;
 }
+
 #restaurant-img {
 	width: 90%;
 }
+
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
 }
+
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
@@ -508,119 +388,67 @@ header {
   width: 100%;
 }
 
-.restaurant-container {
-  /*padding: 0 20px 30px;*/
-  /*border-top: 1px solid #fff;*/
-  /*width: 50%;*/
-
-
-}
-
-.reviews-container {
-  border-top: 1px solid #fff;
-    padding: 0 20px 0;
-  width: 100%;
-}
-
-.reviews-container h2 {
-  color: #f58500;
-  font-size: 24pt;
-  font-weight: 300;
-  letter-spacing: -1px;
-  padding-bottom: 1pt;
-}
-
-
-#reviews-list {
-  margin: 0;
-  padding: 0;
-}
-#reviews-list li {
-  background-color: #fff;
-    border: 2px solid #f3f3f3;
-  display: block;
-  list-style-type: none;
-  margin: 0 0 30px;
-  overflow: hidden;
-  padding: 0 20px 20px;
-  position: relative;
-  width: 100%;
-}
-#reviews-list li p {
-  margin: 0 0 10px;
-}
-#restaurant-hours td {
-  color: #666;
-}
-
+/*Hide accessibility back to top link */
 .hidden-element {
   left: -200px;
   position: relative;
 }
 
 
+/*****  Media Breaks  *****************************************/
+
+
 @media screen and (max-width: 799px) {    /*main page*/
+  .search-wrapper {
+	grid-template-areas:
+	  "filterv filterv filterv filterv filterv"
+	  "mapv mapv mapv mapv mapv"
+	  "list list list list list";
+  }
 
-            .search-wrapper {
+  .search-map {
+	height: 50vh;
+	width: 100%;
+  }
 
+  .rest-list-wrapper {
+	overflow-y: hidden;
+  }
 
-              grid-template-areas:
-                "filterv filterv filterv filterv filterv"
-                "mapv mapv mapv mapv mapv"
-                "list list list list list";
-            }
-
-
-            .search-map {
-               height: 50vh;
-              width: 100%;
-            }
-
-              .rest-list-wrapper {
-
-                overflow-y: hidden;
-
-
-              }
-
-              .detail-wrapper {
-                  grid-template-areas:
-    "details details details details"
-    "map map map map"
-    "review review review review";
-              }
-
+  .detail-wrapper {
+	grid-template-areas:
+	  "details details details details"
+	  "map map map map"
+	  "review review review review";
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .detail-details {
+	width: 100%;
+  }
 
+  .detail-map {
+	margin: 0;
+  }
 
-    @media screen and (max-width: 480px) {
-      .detail-details {
-        width: 100%;
-      }
+  nav h1 a {
+	font-size: .75em;
+  }
+  .filter-options {
+	display: inline-grid;
+	padding: 10px 0;
+  }
 
-      .map--cont {
-        margin: 0;
-      }
+  .filter-options select {
+	margin: 10px auto;
+  }
 
-      .filter-options {
-        display: inline-grid;
-        padding: 10px 0;
-      }
+  .filter-box {
+	display: grid;
+  }
 
-
-      .filter-options select {
-        margin: 10px auto;
-      }
-.filter-box {
-display: grid;
-/*width: auto;*/
-
+  .rest-list-img {
+	height: 0;
+  }
 }
-
-
-      .rest-list-img {
-        height: 0;
-
-      }
-    }
