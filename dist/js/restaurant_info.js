@@ -109,8 +109,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });
-  ul.setAttribute("aria-name","list of reviews");
-  ul.setAttribute("aria-role","list");
+
   container.appendChild(ul);
 }
 
@@ -146,6 +145,9 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.setAttribute("tabIndex","0");
+
+
   breadcrumb.appendChild(li);
 }
 
