@@ -18,26 +18,32 @@
     </ul>
   </header>
 
-  <main id="maincontent" class="detail-wrapper">
+  <main id="maincontent" class="detail-wrapper" tabindex="-1">
 
       <!-- <div class="container"> -->
 
-              <div id="restaurant-container" class="detail-details restaurant-container">
-                <h1 id="restaurant-name"></h1>
-                <img id="restaurant-img">
-                <p id="restaurant-cuisine"></p>
-                <p id="restaurant-address"></p>
-                <table id="restaurant-hours"></table>
+              <div id="restaurant-container"  class=" detail-details restaurant-container" tabindex="0">
+                <h1 id="restaurant-name" tabindex="0"></h1>
+                <img id="restaurant-img" alt="view of restaurant">
+                <p id="restaurant-cuisine" tabindex="0" ></p>
+                <p id="restaurant-address" tabindex="0"></p>
+                <table id="restaurant-hours" tabindex="0"></table>
               </div>
+
+
+
+              <div id="reviews-container" class="detail-review reviews-container" tabindex="-1" aria-label="Restaurant Reviews">
+            <ul id="reviews-list"></ul>
+          </div>
+
 
               <div class="detail-map map--cont restaurant-container ">
-                <div id="map" class="search-map"> </div>
+                <div id="map" tabindex="999" class="search-map"> </div>
               </div>
 
 
-          <section id="reviews-container" class="detail-review reviews-container">
-            <ul id="reviews-list"></ul>
-          </section>
+
+
       <!-- </div> -->
 
 
