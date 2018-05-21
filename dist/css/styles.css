@@ -363,56 +363,53 @@ nav h1 a {
 
 /******  Media Breaks  *************************************************/
 @media screen and (max-width: 799px) {    /*main page*/
-  .search-wrapper {
-	grid-template-areas:
-	  "filterv filterv filterv filterv filterv"
-	  "mapv mapv mapv mapv mapv"
-	  "list list list list list";
-  }
+	.search-wrapper {
+		grid-template-areas:
+			"filterv filterv filterv filterv filterv"
+			"mapv mapv mapv mapv mapv"
+			"list list list list list";
+	}
 
-  .search-map {
-	height: 50vh;
-	width: 100%;
-  }
+	.search-map {
+		height: 50vh;
+		width: 100%;
+	}
 
-  .restaurants-list-wrapper {
-	overflow-y: hidden;
-  }
-
-  .detail-wrapper {
-	grid-template-areas:
-	  "details details details details"
-	  "map map map map"
-	  "review review review review";
-  }
+	.detail-wrapper {
+		grid-template-areas:
+			"details details details details"
+			"map map map map"
+			"review review review review";
+	}
 }
 
 @media screen and (max-width: 480px) {
-  .detail-details {
-	width: 100%;
-  }
+	.detail-details {
+		width: 100%;
+	}
 
-  .detail-map {
-	margin: 0;
-  }
+	.detail-map {
+		margin: 0;
+	}
 
-  nav h1 a {
-	font-size: .75em;
-  }
-  .filter-options {
-	display: inline-grid;
-	padding: 10px 0;
-  }
+	nav h1 a {
+		font-size: .75em;
+	}
 
-  .filter-options select {
-	margin: 10px auto;
-  }
+	.filter-options {
+		display: inline-grid;
+		padding: 10px 0;
+	}
 
-  .search-filter-box {
-	display: grid;
-  }
+	.filter-options select {
+		margin: 10px auto;
+	}
 
-  .restaurants-list-imgbox {
-	height: 0;
-  }
+	.search-filter-box {
+		display: grid;
+	}
+
+	.restaurants-list-imgbox {
+		height: 0;
+	}
 }
