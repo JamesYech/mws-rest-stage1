@@ -1,14 +1,9 @@
+//Cache offline files at first page visit
 self.addEventListener('install', function(event) {
 	event.waitUntil(
 		caches.open('restreview-v1').then(function(cache) {
 			return cache.addAll([
 				'/',
-				'css/styles.css',
-				'data/restaurants.json',
-				'js/dbhelper.js',
-				'js/main.js',
-				'js/restaurant_info.js',
-				'sw.js',
 				'img/11.png'
 			]);
 		})
