@@ -1,9 +1,8 @@
 @charset "utf-8";
-/* CSS Document */
 
 *, *:before, *:after {
-   box-sizing: border-box;
-   margin: 0;
+	box-sizing: border-box;
+	margin: 0;
 }
 
 body,td,th,p{
@@ -12,275 +11,310 @@ body,td,th,p{
 	color: #333;
 	line-height: 1.5;
 }
+
 body {
 	background-color: #fdfdfd;
-	margin: 0;
 	position:relative;
-  max-width: 1000px;
-
+	max-width: 1000px;
 }
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
-  padding: 0;
+	padding: 0;
 }
+
 a {
 	color: orange;
 	text-decoration: none;
 }
+
 a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+
 a img{
 	border: none 0px #fff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-#maincontent {
-  background-color: #f3f3f3;
+
+
+/******  Shared  *******************************************************/
+header {
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	border-bottom: 1px solid #d9d9d9;
 }
+
+/*Hide accessibility back to top link */
+.hidden-element {
+	left: -200px;
+	position: relative;
+}
+
 #footer {
-  background-color: #444;
-  color: #aaa;
-  font-size: 8pt;
-  letter-spacing: 1px;
-  padding: 25px;
-  text-align: center;
-  text-transform: uppercase;
+	background-color: #444;
+	color: #aaa;
+	font-size: 8pt;
+	letter-spacing: 1px;
+	padding: 25px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 
 /******  Search/Filter Page  *******************************************/
-
 .search-wrapper {
-  margin: 0 auto 0 auto;
-  display: inline-grid;
-  width: 100%;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows:  auto;
-  grid-template-areas:
-	"filterv filterv filterv mapv mapv"
-	"list list list mapv mapv";
+	margin: 0 auto 0 auto;
+	display: inline-grid;
+	width: 100%;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows:  auto;
+	grid-template-areas:
+		"filterv filterv filterv mapv mapv"
+		"list list list mapv mapv";
+}
+
+.search-filter-box {
+	margin: auto;
 }
 
 .search-filter {
-  grid-area: filterv;
-  display: flex;
-  width: 100%;
-  height: auto;
-  background-color: #3397DB;
-  align-items: center;
+	grid-area: filterv;
+	display: flex;
+	width: 100%;
+	height: auto;
+	background-color: #3397DB;
+	align-items: center;
+}
+
+.search-filter h2 {
+	color: white;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 20px;
+}
+
+.search-filter select {
+	background-color: white;
+	border: 1px solid #fff;
+	font-family: Arial,sans-serif;
+	font-size: 11pt;
+	height: 48px;
+	letter-spacing: 0;
+	margin: 20px;
+	padding: 0 10px;
+	width: 200px;
 }
 
 .search-map-grid {
-  grid-area: mapv;
-}
-
-.search-rest-list {
-  grid-area: list;
+	grid-area: mapv;
 }
 
 .search-map {
-   height: 80vh;
-  width: 100%;
-}
-
-.filter-options {
-
-}
-.filter-box {
- /*used by media break*/
- margin: auto;
-}
-.search-filter h2 {
-  color: white;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0 20px;
-}
-.search-filter select {
-  background-color: white;
-  border: 1px solid #fff;
-  font-family: Arial,sans-serif;
-  font-size: 11pt;
-  height: 48px;
-  letter-spacing: 0;
-  margin: 20px;
-  padding: 0 10px;
-  width: 200px;
+	height: 80vh;
+	width: 100%;
 }
 
 .my-well {
-  min-height: 20px;
-  padding: 19px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
-  width: 100%;
-  display: flex;
-  transition: background-color .25s ease;
+	min-height: 20px;
+	padding: 19px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	width: 100%;
+	display: flex;
+	transition: background-color .25s ease;
 }
 
 .my-well:hover {
-  background: #E9E9E9;
-  transition: 0.25s ease;
+	background: #E9E9E9;
+	transition: 0.25s ease;
 }
 
-.rest-list-wrapper {
-  grid-gap: 10px;
-  grid-template-columns: 1fr 3fr;
-  overflow-y: auto;
-  max-height: 800px;
+.search-restaurants-list {
+	grid-area: list;
 }
 
-.rest-list-rest {
-  grid-column: 1;
-  margin-left: 15px;
+.restaurants-list-wrapper {
+	grid-gap: 10px;
+	grid-template-columns: 1fr 3fr;
+	overflow-y: auto;
+	max-height: 800px;
 }
 
-.rest-list-img {
-  grid-column: 2;
-  height: 150px;
+.restaurants-list-wrapper img {
+	object-fit: cover;
+	max-height: 100%;
 }
 
-.rest-list-img img {
-  object-fit: cover;
-  max-height: 100%;
+.restaurants-list-wrapper li h1 {
+	color: #f18200;
+	font-family: Arial,sans-serif;
+	font-size: 14pt;
+	font-weight: 200;
+	letter-spacing: 0;
+	line-height: 1.3;
+	text-transform: uppercase;
 }
 
-#restaurants-list li h1 {
-  color: #f18200;
-  font-family: Arial,sans-serif;
-  font-size: 14pt;
-  font-weight: 200;
-  letter-spacing: 0;
-  line-height: 1.3;
-  text-transform: uppercase;
+.restaurants-list-wrapper p {
+	margin: 0;
+	font-size: 11pt;
 }
 
-#restaurants-list p {
-  margin: 0;
-  font-size: 11pt;
+.restaurants-list-wrapper li button {
+	background-color: orange;
+	color: #fff;
+	display: inline-block;
+	font-size: 10pt;
+	margin: 15px 0 0;
+	padding: 8px 30px 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: none;
 }
 
-#restaurants-list li button {
-  background-color: orange;
-  color: #fff;
-  display: inline-block;
-  font-size: 10pt;
-  margin: 15px 0 0;
-  padding: 8px 30px 10px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: none;
+.restaurants-list-info {
+	grid-column: 1;
+	margin-left: 15px;
+}
+
+.restaurants-list-imgbox {
+	grid-column: 2;
+	height: 150px;
 }
 
 
-/******  Reviews/Detail Page  *******************************************/
-
+/******  Details/Reviews Page  *****************************************/
 .detail-wrapper {
-  margin: 0 auto 0 auto;
-  display: inline-grid;
-  width: 100%;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows:  auto;
-  grid-template-areas:
-	"details details map map"
-	"review review review review";
+	background-color: #f3f3f3;
+	margin: 0 auto 0 auto;
+	display: inline-grid;
+	width: 100%;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows:  auto;
+	grid-template-areas:
+		"details details map map"
+		"review review review review";
 }
 
 .detail-details {
-  grid-area: details;
-  padding: 0 20px 30px;
+	grid-area: details;
+	padding: 0 20px 30px;
+}
+
+#restaurant-name {
+	color: #f18200;
+	font-family: Arial,sans-serif;
+	font-size: 20pt;
+	font-weight: 200;
+	letter-spacing: 0;
+	margin: 15px 0 30px;
+	text-transform: uppercase;
+	line-height: 1.1;
+}
+
+#restaurant-img {
+	width: 90%;
+}
+
+#restaurant-address {
+	font-size: 12pt;
+	margin: 10px 0px;
+}
+
+#restaurant-cuisine {
+	background-color: #333;
+	color: #ddd;
+	font-size: 12pt;
+	font-weight: 300;
+	letter-spacing: 10px;
+	margin: 0 0 20px;
+	padding: 2px 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 90%;
 }
 
 .detail-map {
-  grid-area: map;
-  margin: 15px 0 0;
-  padding: 0 20px 30px;
+	grid-area: map;
+	margin: 15px 0 0;
+	padding: 0 20px 30px;
 }
 
 .detail-review {
-  grid-area: review;
-}
-
-.info-row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.reviews-container {
-  border-top: 1px solid #fff;
-  padding: 0 20px 0;
-  width: 100%;
-}
-
-.reviews-container h2 {
-  color: #f58500;
-  font-size: 24pt;
-  font-weight: 300;
-  letter-spacing: -1px;
-  padding-bottom: 1pt;
+	grid-area: review;
 }
 
 
-#reviews-list {
-  margin: 0;
-  padding: 0;
+
+.reviews-wrapper {
+	border-top: 1px solid #fff;
+	padding: 0 20px 0;
+	width: 100%;
 }
 
-#reviews-list li {
-  background-color: #fff;
-  border: 2px solid #f3f3f3;
-  display: block;
-  list-style-type: none;
-  margin: 0 0 30px;
-  overflow: hidden;
-  padding: 0 20px 20px;
-  position: relative;
-  width: 100%;
+.reviews-wrapper h2 {
+	color: #f58500;
+	font-size: 24pt;
+	font-weight: 300;
+	letter-spacing: -1px;
+	padding-bottom: 1pt;
 }
 
-#reviews-list li p {
-  margin: 0 0 10px;
+.reviews-wrapper li {
+	background-color: #fff;
+	border: 2px solid #f3f3f3;
+	display: block;
+	list-style-type: none;
+	margin: 0 0 30px;
+	overflow: hidden;
+	padding: 0 20px 20px;
+	position: relative;
+	width: 100%;
+}
+
+.reviews-wrapper li p {
+	margin: 0 0 10px;
 }
 
 #restaurant-hours td {
-  color: #666;
+	color: #666;
 }
 
 
-/* ====================== Navigation ====================== */
-
+/******  Details/Reviews Page - Navigation  ****************************/
 nav {
-  width: 100%;
-  height: 40px;
-  background-color: #252831;
-  text-align:center;
+	width: 100%;
+	height: 40px;
+	background-color: #252831;
+	text-align:center;
 }
 
 nav h1 {
-  margin: auto;
+	margin: auto;
 }
 
 nav h1 a {
-  color: #fff;
-  font-size: 14pt;
-  font-weight: 200;
-  letter-spacing: 10px;
-  text-transform: uppercase;
+	color: #fff;
+	font-size: 14pt;
+	font-weight: 200;
+	letter-spacing: 10px;
+	text-transform: uppercase;
 }
 
 #breadcrumb {
@@ -317,72 +351,7 @@ nav h1 a {
 }
 
 
-
-/* ====================== Shared Styles ====================== */
-
-header {
-  /*position: fixed;*/
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-#restaurant-name {
-  color: #f18200;
-  font-family: Arial,sans-serif;
-  font-size: 20pt;
-  font-weight: 200;
-  letter-spacing: 0;
-  margin: 15px 0 30px;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-#restaurant-img {
-	width: 90%;
-}
-
-#restaurant-address {
-  font-size: 12pt;
-  margin: 10px 0px;
-}
-
-#restaurant-cuisine {
-  background-color: #333;
-  color: #ddd;
-  font-size: 12pt;
-  font-weight: 300;
-  letter-spacing: 10px;
-  margin: 0 0 20px;
-  padding: 2px 0;
-  text-align: center;
-  text-transform: uppercase;
-	width: 90%;
-}
-
-.rest-cuisine {
-  background-color: #333;
-  color: #ddd;
-  font-size: 12pt;
-  font-weight: 300;
-  letter-spacing: 10px;
-  margin: 0 0 20px;
-  padding: 2px 0;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-/*Hide accessibility back to top link */
-.hidden-element {
-  left: -200px;
-  position: relative;
-}
-
-
-/*****  Media Breaks  *****************************************/
-
-
+/******  Media Breaks  *************************************************/
 @media screen and (max-width: 799px) {    /*main page*/
   .search-wrapper {
 	grid-template-areas:
@@ -396,7 +365,7 @@ header {
 	width: 100%;
   }
 
-  .rest-list-wrapper {
+  .restaurants-list-wrapper {
 	overflow-y: hidden;
   }
 
@@ -429,11 +398,11 @@ header {
 	margin: 10px auto;
   }
 
-  .filter-box {
+  .search-filter-box {
 	display: grid;
   }
 
-  .rest-list-img {
+  .restaurants-list-imgbox {
 	height: 0;
   }
 }

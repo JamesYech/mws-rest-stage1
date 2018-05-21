@@ -65,7 +65,6 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
-
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
@@ -87,13 +86,6 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
-
-  // self.map.addListener( 'tilesloaded', function() {
-  //   [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
-  //     console.log(item);
-  //     item.setAttribute("tabIndex","999");
-  //   });
-  // })
 
   updateRestaurants();
 }
@@ -152,62 +144,39 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.className='my-well';  //mine
+  li.className='my-well';
 
-    const div2=document.createElement('div');  //mine
-  div2.className='rest-list-img'; //mine
+  const div2=document.createElement('div');
+  div2.className='restaurants-list-imgbox';
 
-
-    const image = document.createElement('img');
-  // image.className = 'restaurant-img';
-
+  const image = document.createElement('img');
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  // li.append(image);
+  div2.append(image);
 
-  div2.append(image); //mine
+  li.append(div2);
 
-  li.append(div2); //mine
-
-  const div1 = document.createElement('div'); //mine
-  div1.className='rest-list-rest';
-  div1.setAttribute("tabIndex","0"); //mine
-
+  const div1 = document.createElement('div');
+  div1.className='restaurants-list-info';
+  div1.setAttribute("tabIndex","0");
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  // li.append(name);
-  div1.append(name);  //mine
+  div1.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  // li.append(neighborhood);
-  div1.append(neighborhood); //mine
+  div1.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  // li.append(address);
-  div1.append(address);  //mine
-
-  //  const more = document.createElement('a');
-  // more.innerHTML = 'View Details';
-  // more.href = DBHelper.urlForRestaurant(restaurant);
-  // // li.append(more);
-  // div1.append(more);
-
+  div1.append(address);
 
   const more = document.createElement('button');
   more.innerHTML = 'View Details';
   more.addEventListener('click', function() {window.location.href=DBHelper.urlForRestaurant(restaurant);});
-  // li.append(more);
   div1.append(more);
 
-
-
-  li.append(div1);  //mine
-
-
-
-
+  li.append(div1);
 
   return li
 }

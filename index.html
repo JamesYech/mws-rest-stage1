@@ -16,7 +16,7 @@
 
 		<main class="search-wrapper" >
 			<section id="filter-options" class="search-filter" aria-label="Filter Options" tabindex="0">
-				<div class="filter-box">
+				<div class="search-filter-box">
 					<select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
 						<option value="all">All Neighborhoods</option>
 					</select>
@@ -26,8 +26,8 @@
 				</div>
 			</section>
 
-			<section id="filter-results" class="search-rest-list" aria-label="Restaurant List" tabindex="0">
-				<ul id="restaurants-list" class="rest-list-wrapper" ></ul>
+			<section id="filter-results" class="search-restaurants-list" aria-label="Restaurant List" tabindex="0">
+				<ul id="restaurants-list" class="restaurants-list-wrapper" ></ul>
 				<a href="#filter-options" class="hidden-element" tabindex="0">Back to top</a>
 			</section>
 
@@ -46,4 +46,3 @@
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzdB4fcbv6ihTq8uae2rXPLNkHMZbZ0j0&libraries=places&callback=initMap"></script>
 	</body>
 </html>
-
